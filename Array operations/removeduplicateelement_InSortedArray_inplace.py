@@ -1,0 +1,33 @@
+"""
+Given a sorted array nums, remove the duplicates in-place such that each element appear only once
+and return the new length.
+
+Do not allocate extra space for another array, you must do this by modifying the input array in-place
+with O(1) extra memory.
+"""
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+
+        if len(nums) < 2:
+            return len(nums)
+
+        i3 = 1
+        i1 = nums[0]
+        while i3 < len(nums):
+            if i1 == nums[i3]:
+                del nums[i3]
+            else:
+                i1 = nums[i3]
+                i3 = i3 + 1
+
+        return len(nums)
+
+
+
+
+
+
+
+
+
